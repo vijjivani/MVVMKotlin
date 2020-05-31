@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="employee"
+            type="com.mvvm.kotlin.room.model.Employee" />
+
+        <variable
+            name="saveEmployeeClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".view.StudentActivity">
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:inputType="textEmailAddress"
+            android:text="@={employee.name}" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:text="@={employee.email}" />
+
+        <EditText
+            android:id="@+id/editMobileNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile No."
+            android:inputType="number"
+            android:maxLength="10"
+            android:text="@={employee.phone}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="@{saveEmployeeClick}"
+            android:text="Save" />
+
+    </LinearLayout>
+
+</layout>
