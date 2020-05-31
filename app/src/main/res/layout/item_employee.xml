@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackground"
             android:orientation="vertical"
+            android:layout_weight="1"
             android:padding="8dp">
 
             <TextView
@@ -53,24 +54,32 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"/>
         <Button
             android:id="@+id/delete_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"
+            android:textSize="14sp"
             android:textColor="@android:color/secondary_text_light"
-            android:textSize="14sp" />
+            android:text="Delete"/>
 
         <Button
             android:id="@+id/edit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:text="Edit"
             android:textColor="@android:color/secondary_text_light"
-            android:textSize="14sp" />
-
-
+            android:textSize="14sp"
+            android:text="Edit" />
     </LinearLayout>
+
+
+
+
+
 
 </layout>

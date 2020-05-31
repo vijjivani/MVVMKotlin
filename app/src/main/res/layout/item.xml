@@ -1,0 +1,113 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="employee"
+            type="com.mvvm.kotlin.room.model.Employee" />
+
+    </data>
+
+    <com.mvvm.kotlin.room.view.fragment.SwipeRevealLayout
+        android:id="@+id/item_student_root1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:id="@+id/item_student_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/label_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/primary_text_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@{employee.name}" />
+
+                    <TextView
+                        android:id="@+id/label_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="14sp"
+                        android:text="@{employee.phone}" />
+
+                    <TextView
+                        android:id="@+id/label_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="14sp"
+                        android:text="@{employee.email}" />
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/delete_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/edit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="Edit"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+
+
+    </com.mvvm.kotlin.room.view.fragment.SwipeRevealLayout>
+
+</layout>
